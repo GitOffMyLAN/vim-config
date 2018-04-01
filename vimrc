@@ -223,8 +223,13 @@ execute pathogen#infect()
 	autocmd Filetype rmd inoremap ;p ```{python}<CR>```<CR><CR><esc>2kO
 "PYTHON
 	autocmd Filetype python inoremap ;im import<space><Enter><Enter><++><Esc>kkA
-	"autocmd Filetype python inoremap ;d def(<++>):<Enter><Tab><++><Esc>khA
-""".xml
+	autocmd Filetype python inoremap ;d def<space>(<++>):<Enter><Tab><++><Esc>k5ha<space>
+	autocmd Filetype python inoremap ;if if<space><space>==<space><++>:<Enter><Tab><++><Esc>k4hi
+	autocmd Filetype python inoremap ;ef elif<space><space>==<space><++>:<Enter><Tab><++><Esc>k2hi
+	autocmd Filetype python inoremap ;el else<space>:<Enter><Tab>
+	autocmd Filetype python inoremap ;wh while<space><space>==<space><++>:<Enter><Tab><++><Esc>khi
+	autocmd Filetype python inoremap ;fo for<space><space>in<space>ranger(<++>, <++>):<Enter><Tab><++><Esc>k3hi
+""".
 	"autocmd FileType xml inoremap ;e <item><Enter><title><++></title><Enter><pubDate><Esc>:put<Space>=strftime('%c')<Enter>A</pubDate><Enter><link><++></link><Enter><description><++></description><Enter></item>
 	autocmd FileType xml inoremap ;e <item><Enter><title><++></title><Enter><pubDate><Esc>:put<Space>=strftime('%c')<Enter>A</pubDate><Enter><link><++></link><Enter><description><![CDATA[<++>]]></description><Enter></item><Esc>5kcit
 	autocmd FileType xml inoremap ;a <a href="<++>"><++></a><++><Esc>F"ci"

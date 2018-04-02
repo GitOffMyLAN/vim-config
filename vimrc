@@ -1,9 +1,4 @@
-set number
 set tabstop=2
-syntax on
-execute pathogen#infect()
-"map <F1> vimenter * NERDTree
-
 " Load Pathogen for plugins:
 	execute pathogen#infect()
 	execute pathogen#helptags()
@@ -229,6 +224,13 @@ execute pathogen#infect()
 	autocmd Filetype python inoremap ;el else<space>:<Enter><Tab>
 	autocmd Filetype python inoremap ;wh while<space><space>==<space><++>:<Enter><Tab><++><Esc>khi
 	autocmd Filetype python inoremap ;fo for<space><space>in<space>ranger(<++>, <++>):<Enter><Tab><++><Esc>k3hi
+"JAVASCRIPT
+	autocmd Filetype javascript inoremap ;fu function<space><space>(<++>){<Enter><tab><++><Enter>}<Enter><Enter><++><Esc>4k8li
+	autocmd Filetype javascript inoremap ;fo for<space>(){<Enter><Tab><++><Enter>}<Enter><Enter><++><Esc>4k2li
+	autocmd Filetype javascript inoremap ;if if<space>(){<Enter><Tab><++><Enter>}<space><++><Enter><Enter><++><Esc>4kli
+	autocmd Filetype javascript inoremap ;el else<space>(){<Enter><Tab><++><Enter>}<Enter><Enter><++><Esc>4kli
+	autocmd Filetype javascript inoremap ;ef else if<space>(){<Enter><Tab><++><Enter>}<space><++><Enter><Enter><++><Esc>4kli
+	auto cmd Filetype javascript inoremap ;v var<space>=<space>;<Enter><++><Esc>k$hi
 """.
 	"autocmd FileType xml inoremap ;e <item><Enter><title><++></title><Enter><pubDate><Esc>:put<Space>=strftime('%c')<Enter>A</pubDate><Enter><link><++></link><Enter><description><++></description><Enter></item>
 	autocmd FileType xml inoremap ;e <item><Enter><title><++></title><Enter><pubDate><Esc>:put<Space>=strftime('%c')<Enter>A</pubDate><Enter><link><++></link><Enter><description><![CDATA[<++>]]></description><Enter></item><Esc>5kcit

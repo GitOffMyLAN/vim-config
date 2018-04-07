@@ -7,9 +7,9 @@ set tabstop=2
 	set nocompatible
 	filetype plugin on
 	syntax on
-	"colorscheme wal
+	colorscheme wal
 	set encoding=utf-8
-"	set number
+	set number
 "	set relativenumber
 
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
@@ -191,7 +191,7 @@ set tabstop=2
 	autocmd FileType php,html inoremap ;dl <dl><Enter><Enter></dl><enter><enter><++><esc>3kcc
 	"autocmd FileType php,html inoremap -- &ndash;
 	"autocmd FileType php,html inoremap --- &mdash;
-	autocmd FileType php,html inoremap ;ma <!DOCTYPE html><Enter><Enter><html><Enter><Tab><head><Enter><Tab><title><++></title><Enter><Tab></head><Enter><Enter><Tab><body><++></body><Enter><Enter></html><esc>gg
+	autocmd FileType php,html inoremap ;ma <!DOCTYPE html><Enter><Enter><html lang="eng"><Enter><Tab><head><Enter><Tab><Tab><title><++></title><Enter><Tab></head><Enter><Enter><Tab><body><++></body><Enter><Enter></html><esc>gg
 	autocmd FileType php,html inoremap ;cl <space>class="<++>"<space>i<Tab><space>
 
 """.bib
@@ -230,7 +230,7 @@ set tabstop=2
 	autocmd Filetype javascript inoremap ;if if<space>(){<Enter><Tab><++><Enter>}<space><++><Enter><Enter><++><Esc>4kli
 	autocmd Filetype javascript inoremap ;el else<space>(){<Enter><Tab><++><Enter>}<Enter><Enter><++><Esc>4kli
 	autocmd Filetype javascript inoremap ;ef else if<space>(){<Enter><Tab><++><Enter>}<space><++><Enter><Enter><++><Esc>4kli
-	auto cmd Filetype javascript inoremap ;v var<space>=<space>;<Enter><++><Esc>k$hi
+	autocmd Filetype javascript inoremap ;v var<space>=<space>;<Enter><++><Esc>k$hi
 """.
 	"autocmd FileType xml inoremap ;e <item><Enter><title><++></title><Enter><pubDate><Esc>:put<Space>=strftime('%c')<Enter>A</pubDate><Enter><link><++></link><Enter><description><++></description><Enter></item>
 	autocmd FileType xml inoremap ;e <item><Enter><title><++></title><Enter><pubDate><Esc>:put<Space>=strftime('%c')<Enter>A</pubDate><Enter><link><++></link><Enter><description><![CDATA[<++>]]></description><Enter></item><Esc>5kcit
@@ -243,3 +243,6 @@ vnoremap K xkP`[V`]
 vnoremap J xp`[V`]
 vnoremap L >gv
 vnoremap H <gv
+let g:neocomplete#enable_at_startup = 1
+map <C-h> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

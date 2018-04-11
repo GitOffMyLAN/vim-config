@@ -231,6 +231,10 @@ set tabstop=2
 	autocmd Filetype javascript inoremap ;el else<space>(){<Enter><Tab><++><Enter>}<Enter><Enter><++><Esc>4kli
 	autocmd Filetype javascript inoremap ;ef else if<space>(){<Enter><Tab><++><Enter>}<space><++><Enter><Enter><++><Esc>4kli
 	autocmd Filetype javascript inoremap ;v var<space>=<space>;<Enter><++><Esc>k$hi
+"SHELL
+"C
+"C++
+"PHP
 """.
 	"autocmd FileType xml inoremap ;e <item><Enter><title><++></title><Enter><pubDate><Esc>:put<Space>=strftime('%c')<Enter>A</pubDate><Enter><link><++></link><Enter><description><++></description><Enter></item>
 	autocmd FileType xml inoremap ;e <item><Enter><title><++></title><Enter><pubDate><Esc>:put<Space>=strftime('%c')<Enter>A</pubDate><Enter><link><++></link><Enter><description><![CDATA[<++>]]></description><Enter></item><Esc>5kcit
